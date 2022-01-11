@@ -1,0 +1,24 @@
+{
+  "name": "drutiny/pantheon",
+  "type": "library",
+  "description": "Pantheon target source for Drutiny.",
+  "keywords": ["drupal", "audit", "drush", "ssh", "report", "pantheon"],
+  "license": "GPL-2.0",
+  "authors": [
+    {"name": "Josh Waihi", "email": "joshwaihi@gmail.com"}
+  ],
+  "prefer-stable": true,
+  "require": {
+    "drutiny/drutiny": "^3.1.1"
+  },
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://github.com/drutiny/plugin-pantheon/issues",
+    "source": "https://github.com/drutiny/plugin-pantheon"
+  },
+  "autoload": {
+    "psr-4": {
+      "Drutiny\\Pantheon\\": "src/"
+    }
+  }
+}

@@ -19,7 +19,9 @@ class PantheonTarget extends DrushTarget implements TargetSourceInterface
     {
         list($site, $env) = explode('.', $alias, 2);
 
-        parent::parse('@pantheon.'.$alias);
+        $this['drush.alias'] = '@pantheon.'.$alias;
+
+        parent::parse($this['drush.alias']);
 
         return $this;
     }

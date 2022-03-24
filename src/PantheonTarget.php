@@ -15,7 +15,7 @@ class PantheonTarget extends DrushTarget implements TargetSourceInterface
     /**
      * Parse target data.
      */
-    public function parse($alias): TargetInterface
+    public function parse(string $alias, ?string $uri = NULL): TargetInterface
     {
         list($site, $env) = explode('.', $alias, 2);
 

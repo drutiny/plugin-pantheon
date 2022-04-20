@@ -31,10 +31,10 @@ class PantheonTarget extends DrushTarget implements TargetSourceInterface
      */
     public function getAvailableTargets():array
     {
-      $sites = $this['service.local']->run('terminus site:list --format=json', function ($output) {
+      $sites = $this['service.exec']->get('local')->run('terminus site:list --format=json', function ($output) {
         $sites = json_decode($output, true);
         foreach ($sites as &$site) {
-          $site['envs'] = $this['service.local']->run(sprintf('terminus env:list %s --format=json', $site['id']), function ($envo) {
+          $site['envs'] = $this['service.exec']->get('local')->run(sprintf('terminus env:list %s --format=json', $site['id']), function ($envo) {
               return json_decode($envo, true);
           });
         }

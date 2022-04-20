@@ -9,7 +9,7 @@
   ],
   "prefer-stable": true,
   "require": {
-    "drutiny/drutiny": "^3.3.0"
+    "drutiny/drutiny": "^3.4.0"
   },
   "minimum-stability": "dev",
   "support": {
